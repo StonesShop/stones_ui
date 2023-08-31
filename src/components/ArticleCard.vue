@@ -7,27 +7,23 @@
         {{ price }}р
       </n-card>
     </div>
-  </template>
-  
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import { NCard } from 'naive-ui';
+</template>
 
-@Options({
+<script lang="ts">
+import { NCard } from 'naive-ui';
+import { defineComponent } from 'vue';
+
+export default defineComponent ({
+  name: 'ArticleCard',
   components: {
     NCard
   },
   props: {
     name: String,
     price: Number,
-    photoUrl: String
+    photoUrl: String,
   }
 })
-export default class ArticleCard extends Vue {
-  name!: string
-  price!: number
-  photoUrl!: string
-}
 </script>
 
 <style scoped>

@@ -1,19 +1,20 @@
 <template>
-  <Catalog />
+  <CatalogComponent />
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import Catalog from './components/Catalog.vue';
+import { defineComponent } from 'vue';
+import CatalogComponent from './components/CatalogComponent.vue';
 
-@Options({
+export default defineComponent({
+  name: 'App',
   components: {
-    Catalog
-  },
-})
-export default class App extends Vue {}
+    CatalogComponent
+  }
+});
 </script>
 
 <style>
 
 </style>
+

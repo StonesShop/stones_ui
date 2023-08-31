@@ -31,26 +31,26 @@
         </n-layout>
       </n-space>
     </div>
-  </template>
-  
+</template>
+
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
 import { NLayout, NLayoutHeader, NLayoutSider, NLayoutFooter, NSpace, NH2 } from 'naive-ui';
 import GridStore from './GridStore.vue'
+import { defineComponent } from 'vue';
 
-@Options({
-  components: {
-    NLayout,
-    NLayoutHeader,
-    NLayoutSider,
-    NLayoutFooter,
-    NSpace,
-    NH2,
-    GridStore
-  },
+
+export default defineComponent ({
+    name: 'CatalogComponent',
+    components: {
+        NLayout,
+        NLayoutHeader,
+        NLayoutSider,
+        NLayoutFooter,
+        NSpace,
+        NH2,
+        GridStore
+    }
 })
-export default class Catalog extends Vue {
-}
 </script>
 
 <style scoped>
