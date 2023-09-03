@@ -11,9 +11,14 @@
             <n-layout-sider
               content-style="padding: 24px;"
               :native-scrollbar="false"
+              :collapsed-width="0"
+              :width="240"
+              :default-collapsed="true"
+              show-trigger="bar"
+              position="absolute"
               bordered
             >
-              <n-h2>Handian Bridge</n-h2>
+              <n-h2>Фильтры</n-h2>
             </n-layout-sider>
 
             <n-layout content-style="padding: 24px;" :native-scrollbar="false">
@@ -26,7 +31,7 @@
             style="height: 64px; padding: 24px"
             bordered
           >
-            城府路
+            <router-link to="/about">About</router-link> |
           </n-layout-footer>
         </n-layout>
       </n-space>
@@ -35,7 +40,7 @@
 
 <script lang="ts">
 import { NLayout, NLayoutHeader, NLayoutSider, NLayoutFooter, NSpace, NH2 } from 'naive-ui';
-import GridStore from './GridStore.vue'
+import GridStore from '@/components//GridStore.vue'
 import { defineComponent } from 'vue';
 
 

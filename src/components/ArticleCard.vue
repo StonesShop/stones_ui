@@ -1,11 +1,16 @@
 <template>
     <div class="card">
-      <n-card :title="name">
-        <template #cover>
-          <img :src="photoUrl"> 
-        </template>
-        {{ price }}р
-      </n-card>
+      <router-link :to="{ name: 'article', params: { id: id_article}}">
+        <n-card
+          :title="name"
+          :hoverable="true"
+        >
+          <template #cover>
+            <img :src="photoUrl"> 
+          </template>
+          {{ price }}р
+        </n-card>
+      </router-link>
     </div>
 </template>
 
@@ -19,9 +24,15 @@ export default defineComponent ({
     NCard
   },
   props: {
+    id_article: Number,
     name: String,
     price: Number,
     photoUrl: String,
+  },
+  methods: {
+    openArticle() {
+      console.log(this.id_article)
+    }
   }
 })
 </script>
